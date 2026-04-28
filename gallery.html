@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gallery — NPG-Unique Computers, Porbandar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+  <link href="css/style.css" rel="stylesheet"/>
+  <style>
+    .filter-bar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:32px;justify-content:center}
+    .filter-btn{padding:8px 20px;border-radius:20px;border:1px solid var(--border);background:var(--white);font-size:.84rem;font-weight:500;cursor:pointer;transition:all .2s;color:var(--text);font-family:var(--font)}
+    .filter-btn:hover,.filter-btn.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+    .result-section{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:36px;margin-top:20px}
+    .result-table{width:100%;border-collapse:collapse;margin-top:20px}
+    .result-table th{background:var(--navy);color:#fff;padding:12px 16px;font-size:.84rem;font-weight:600;text-align:left}
+    .result-table td{padding:12px 16px;font-size:.85rem;color:var(--text);border-bottom:1px solid var(--border)}
+    .result-table tr:nth-child(even) td{background:var(--bg)}
+    .result-table tr:hover td{background:var(--navy-bg)}
+    .grade-badge{display:inline-block;padding:3px 12px;border-radius:6px;font-weight:800;font-size:.82rem}
+    .grade-aplus{background:#e8f5e9;color:#2e7d32}
+    .grade-a{background:#e3f2fd;color:#1565c0}
+    .grade-b{background:#fff3e0;color:#e65100}
+    .cert-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+    @media(max-width:768px){.cert-grid{grid-template-columns:repeat(2,1fr)}.result-table{font-size:.78rem}}
+    @media(max-width:480px){.cert-grid{grid-template-columns:1fr 1fr}}
+  </style>
+</head>
+<body>
+
+<div class="topbar"><div class="tb-inner"><span><i class="fas fa-map-marker-alt"></i> 3rd Floor, Royal Complex, Opp. Khijadi Plot, M.G. Road, Porbandar, Gujarat</span><span><i class="fas fa-phone"></i> +91 96384 47534 &nbsp;|&nbsp; <i class="fas fa-envelope"></i> npg.unique.computers@gmail.com</span></div></div>
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-box"><i class="fas fa-desktop"></i></div>
+      <div class="logo-text"><strong>NPG-Unique Computers</strong><span>Authorised Training Centre, Porbandar</span></div>
+    </a>
+    <div class="hamburger"><span></span><span></span><span></span></div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="courses.html">Courses</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html" class="active">Gallery</a>
+      <a href="contact.html">Contact</a>
+      <a href="contact.html" class="btn-enquire">Enquire Now</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="container">
+    <h1><i class="fas fa-images"></i> Gallery</h1>
+    <p>A look inside our campus, classrooms, lab, events and student achievements</p>
+    <div class="breadcrumb"><a href="index.html">Home</a><i class="fas fa-chevron-right"></i><span>Gallery</span></div>
+  </div>
+</div>
+
+<!-- Photo Gallery -->
+<section class="section">
+  <div class="container">
+    <div class="sec-head">
+      <div class="tag">Campus Photos</div>
+      <div class="gold-line"></div>
+      <h2>Our <span>Campus & Classrooms</span></h2>
+      <p>Get a feel for the environment where thousands of students have built their careers</p>
+    </div>
+
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">All Photos</button>
+      <button class="filter-btn" data-filter="campus">Campus & Lab</button>
+      <button class="filter-btn" data-filter="classroom">Classrooms</button>
+      <button class="filter-btn" data-filter="events">Events</button>
+      <button class="filter-btn" data-filter="students">Students</button>
+    </div>
+
+    <div class="gal-grid" id="galleryGrid">
+
+      <div class="gal-item tall reveal" data-cat="campus">
+        <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=700&q=80&auto=format&fit=crop" alt="NPG Unique Computer Lab"/>
+        <div class="gal-overlay"><span><i class="fas fa-expand"></i> &nbsp;Computer Lab — 30 Individual PCs</span></div>
+      </div>
+
+      <div class="gal-item reveal" data-cat="classroom">
+        <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=700&q=80&auto=format&fit=crop" alt="Classroom"/>
+        <div class="gal-overlay"><span><i class="fas fa-expand"></i> &nbsp;Main Classroom</span></div>
+      </div>
+
+      <div class="gal-item reveal" data-cat="students">
+        <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=700&q=80&auto=format&fit=crop" alt="Students in Lab"/>
+        <div class="gal-overlay"><span><i class="fas fa-expand"></i> &nbsp;Students in Lab Session</span></div>
+      </div>
+
+      <div class="gal-item reveal" data-cat="events">
+        <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=700&q=80&auto=format&fit=crop" alt="Annual Function"/>
+        <div class="gal-overlay"><span><i class="fas fa-expand"></i> &nbsp;Annual Award Function</span></div>
+      </div>
+
+      <div class="gal-item tall reveal" data-cat="students">
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=700&q=80&auto=format&fit=crop" alt="Group Study"/>
+        <div class="gal-overlay"><span><i class="fas fa-expand"></i> &nbsp;Group Learning Session</span></div>
+      </div>
+
+      <div class="gal-item reveal" data-cat="campus">
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=700&q=80&auto=format&fit=crop" alt="Computer Lab"/>
+        <div class="gal-overlay"><span><i class="fas fa-expand"></i> &nbsp;Air-Conditioned Lab</span></div>
+      </div>
+
+      <div class="gal-item reveal" data-cat="classroom">
+        <img src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?w=700&q=80&auto=format&fit=crop" alt="Tally Class"/>
+        <div class="gal-overlay"><span><i class="fas fa-expand"></i> &nbsp;Tally Training Class</span></div>
+      </div>
+
+      <div class="gal-item reveal" data-cat="events">
+        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=700&q=80&auto=format&fit=crop" alt="Certificate Distribution"/>
+        <div class="gal-overlay"><span><i class="fas fa-expand"></i> &nbsp;Certificate Distribution Ceremony</span></div>
+      </div>
+
+      <div class="gal-item reveal" data-cat="students">
+        <img src="https://images.unsplash.com/photo-1552581234-26160f608093?w=700&q=80&auto=format&fit=crop" alt="Practical Training"/>
+        <div class="gal-overlay"><span><i class="fas fa-expand"></i> &nbsp;Practical Training Session</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Student Results -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="sec-head">
+      <div class="tag">Achievements</div>
+      <div class="gold-line"></div>
+      <h2>Our Former Students' <span>Results</span></h2>
+      <p>We are proud of every student who has excelled in their examinations at NPG-Unique Computers</p>
+    </div>
+
+    <div class="result-section reveal">
+      <h3 style="font-size:1.05rem;font-weight:800;color:var(--navy);margin-bottom:6px">
+        <i class="fas fa-trophy" style="color:var(--gold);margin-right:8px"></i>NIELIT CCC Examination Results
+      </h3>
+      <p style="font-size:.85rem;color:var(--muted)">Students who cleared the NIELIT CCC (Course on Computer Concepts) Government Examination</p>
+      <table class="result-table">
+        <thead>
+          <tr><th>Student Name</th><th>Examination</th><th>Result</th><th>Grade</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Solanki Paras</td><td>NIELIT CCC</td><td>Cleared ✓</td><td><span class="grade-badge grade-a">A Grade</span></td></tr>
+          <tr><td>Rathod Vishwa</td><td>NIELIT CCC</td><td>Cleared ✓</td><td><span class="grade-badge grade-aplus">A+ Grade</span></td></tr>
+          <tr><td>Mer Kavya</td><td>NIELIT CCC</td><td>Cleared ✓</td><td><span class="grade-badge grade-a">A Grade</span></td></tr>
+          <tr><td>Patel Heena</td><td>NIELIT CCC+</td><td>Cleared ✓</td><td><span class="grade-badge grade-aplus">A+ Grade</span></td></tr>
+          <tr><td>Joshi Neel</td><td>NIELIT CCC</td><td>Cleared ✓</td><td><span class="grade-badge grade-b">B Grade</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="result-section reveal" style="margin-top:28px">
+      <h3 style="font-size:1.05rem;font-weight:800;color:var(--navy);margin-bottom:6px">
+        <i class="fas fa-trophy" style="color:var(--gold);margin-right:8px"></i>Tally Examination Results
+      </h3>
+      <p style="font-size:.85rem;color:var(--muted)">Students who cleared Tally Authorised Examinations</p>
+      <table class="result-table">
+        <thead>
+          <tr><th>Student Name</th><th>Examination</th><th>Result</th><th>Grade</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Modha Kishan</td><td>Tally Essential</td><td>Cleared ✓</td><td><span class="grade-badge grade-aplus">A+ Grade</span></td></tr>
+          <tr><td>Lodhari Harsh</td><td>Tally Professional</td><td>Cleared ✓</td><td><span class="grade-badge grade-a">A Grade</span></td></tr>
+          <tr><td>Gohil Bhumi</td><td>Tally Essential</td><td>Cleared ✓</td><td><span class="grade-badge grade-a">A Grade</span></td></tr>
+          <tr><td>Bharwad Dhrumil</td><td>Tally Professional</td><td>Cleared ✓</td><td><span class="grade-badge grade-aplus">A+ Grade</span></td></tr>
+          <tr><td>Chudasama Jay</td><td>Tally Essential</td><td>Cleared ✓</td><td><span class="grade-badge grade-b">B Grade</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</section>
+
+<!-- Certifications & Affiliations -->
+<section class="section">
+  <div class="container">
+    <div class="sec-head">
+      <div class="tag">Recognition</div>
+      <div class="gold-line"></div>
+      <h2>Authorisations & <span>Affiliations</span></h2>
+      <p>NPG-Unique Computers is officially authorised and affiliated with leading organisations</p>
+    </div>
+    <div class="cert-grid">
+      <div class="card reveal" style="padding:28px 18px;text-align:center;border-top:3px solid var(--navy)">
+        <div style="font-size:2.5rem;margin-bottom:14px">🏛️</div>
+        <h4 style="font-size:.9rem;font-weight:800;margin-bottom:6px;color:var(--navy)">NIELIT Authorised</h4>
+        <p style="font-size:.78rem;color:var(--muted)">National Institute of Electronics & Information Technology — Govt. of India</p>
+      </div>
+      <div class="card reveal" style="padding:28px 18px;text-align:center;border-top:3px solid var(--gold)">
+        <div style="font-size:2.5rem;margin-bottom:14px">🧾</div>
+        <h4 style="font-size:.9rem;font-weight:800;margin-bottom:6px;color:var(--navy)">Tally Authorised</h4>
+        <p style="font-size:.78rem;color:var(--muted)">Official Tally Authorised Education Partner by Tally Solutions Pvt. Ltd.</p>
+      </div>
+      <div class="card reveal" style="padding:28px 18px;text-align:center;border-top:3px solid #0078d4">
+        <div style="font-size:2.5rem;margin-bottom:14px">💻</div>
+        <h4 style="font-size:.9rem;font-weight:800;margin-bottom:6px;color:var(--navy)">Microsoft Authorised</h4>
+        <p style="font-size:.78rem;color:var(--muted)">Microsoft Authorised Training Centre for MS Office and related programs</p>
+      </div>
+      <div class="card reveal" style="padding:28px 18px;text-align:center;border-top:3px solid var(--green)">
+        <div style="font-size:2.5rem;margin-bottom:14px">🏆</div>
+        <h4 style="font-size:.9rem;font-weight:800;margin-bottom:6px;color:var(--navy)">22+ Years Trust</h4>
+        <p style="font-size:.78rem;color:var(--muted)">Acknowledged by the public of Saurashtra Region of Gujarat since 2001</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div id="lightbox">
+  <span id="lb-close">&times;</span>
+  <button id="lb-prev"><i class="fas fa-chevron-left"></i></button>
+  <img id="lb-img" src="" alt="Gallery"/>
+  <button id="lb-next"><i class="fas fa-chevron-right"></i></button>
+</div>
+
+<section class="cta-section">
+  <div class="container">
+    <h2>Come Visit Our <span>Campus in Porbandar</span></h2>
+    <p>See our air-conditioned lab and classrooms in person. Book a free visit or call us for more info.</p>
+    <a href="contact.html" class="btn-gold">Contact Us <i class="fas fa-arrow-right"></i></a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="nav-logo"><div class="logo-box"><i class="fas fa-desktop"></i></div><div class="logo-text"><strong style="color:#fff;font-size:1.05rem">NPG-Unique Computers</strong><span style="color:rgba(255,255,255,.45);font-size:.68rem">Authorised Training Centre, Porbandar</span></div></div>
+        <p>Porbandar's most trusted Computer Education Centre since 2001.</p>
+        <div class="f-social"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-youtube"></i></a><a href="#"><i class="fab fa-whatsapp"></i></a></div>
+      </div>
+      <div><h5>Quick Links</h5><ul><li><a href="index.html">Home</a></li><li><a href="courses.html">Courses</a></li><li><a href="about.html">About</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><h5>Courses</h5><ul><li><a href="courses.html">CCC / CCC+</a></li><li><a href="courses.html">Tally Essential</a></li><li><a href="courses.html">Tally Professional</a></li><li><a href="courses.html">Microsoft Office</a></li><li><a href="courses.html">AutoCAD 2D / 3D</a></li><li><a href="courses.html">CorelDRAW</a></li><li><a href="courses.html">Photoshop</a></li></ul></div>
+      <div><h5>Contact Us</h5><div class="f-contact-item"><i class="fas fa-map-marker-alt"></i><span>3rd Floor, Royal Complex, Opp. Khijadi Plot, M.G. Road, Porbandar, Gujarat</span></div><div class="f-contact-item"><i class="fas fa-phone"></i><span>+91 96384 47534</span></div><div class="f-contact-item"><i class="fas fa-envelope"></i><span>npg.unique.computers@gmail.com</span></div></div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 NPG-Unique Computers. All Rights Reserved. | Porbandar, Gujarat, India</p></div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+  // Gallery filter for this page
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const f = btn.dataset.filter;
+      document.querySelectorAll('.gal-item').forEach(item => {
+        item.style.display = (f === 'all' || item.dataset.cat === f) ? '' : 'none';
+      });
+    });
+  });
+</script>
+</body>
+</html>
